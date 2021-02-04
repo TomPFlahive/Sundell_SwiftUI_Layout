@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            CalendarView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct CalendarView: View {
+    var body: some View {
+        Image(systemName: "calendar")
+            .resizable()
+            .frame(width: 50, height: 50)
+            .padding()
+            .background(Color.red)
+            .cornerRadius(10)
+            .foregroundColor(.white)
     }
 }
